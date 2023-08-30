@@ -48,12 +48,12 @@ def train_model():
     training_args = TrainingArguments(
         output_dir="./output_dir",
         overwrite_output_dir=True,
-        num_train_epochs=3,
-        per_device_train_batch_size=4,
-        save_steps=-1,  # Отключение сохранения промежуточных моделей
-        save_total_limit=0,  # Отключение сохранения моделей
-        logging_steps=-1,  # Отключение логирования
-        prediction_loss_only=True,
+        num_train_epochs=10,  # Увеличение количества эпох
+        per_device_train_batch_size=2,  # Уменьшение размера пакета обучения
+        save_steps=500,  # Увеличение частоты сохранения промежуточных результатов
+        save_total_limit=5,  # Сохранение только последних 5 промежуточных результатов
+        logging_steps=100,  # Логирование каждые 100 шагов
+        evaluation_strategy="epoch",
         report_to="tensorboard",  # Использование TensorBoard
     )
 
@@ -78,24 +78,17 @@ def train_model():
         train_dataset=train_dataset,
     )
 
-    # Запуск обучения с логированием вручную
-    for epoch in range(training_args.num_train_epochs):
-        trainer.train()
-        
-        # Логирование метрик в TensorBoard
-        losses = []
-        for batch in trainer.get_train_dataloader():
-            losses.append(batch.loss.item())
-        avg_loss = sum(losses) / len(losses)
-        writer.add_scalar("Training Loss", avg_loss, global_step=trainer.global_step)
-            # Закрытие writer
+    # Запуск обучения с логированием в TensorBoard и сохранением промежуточных результатов
+    trainer.train()
+    trainer.save_model(training_args.output_dir)
+    tokenizer.save_pretrained(training_args.output_dir)
+
+    # Закрытие writer
     writer.close()
 
 
 if __name__ == "__main__":
-    # Задаем устройство для обучения (GPU, если доступен)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Используется устройство: {device}")
 
-    # Запускаем обучение
     train_model()
