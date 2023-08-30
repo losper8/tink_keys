@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "keys_tink.py", line 88, in <module>
+    train_model()
+  File "keys_tink.py", line 83, in train_model
+    trainer.train(callbacks=[wandb.Callback()])
+AttributeError: module 'wandb' has no attribute 'Callback'

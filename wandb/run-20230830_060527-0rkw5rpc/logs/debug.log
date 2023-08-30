@@ -1,0 +1,29 @@
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Configure stats pid to 20920
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Loading settings from C:\Users\user\.config\wandb\settings
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Loading settings from C:\tink_keys\wandb\settings
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'keys_tink.py', 'program': 'keys_tink.py'}
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_init.py:_log_setup():524] Logging user logs to C:\tink_keys\wandb\run-20230830_060527-0rkw5rpc\logs\debug.log
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_init.py:_log_setup():525] Logging internal logs to C:\tink_keys\wandb\run-20230830_060527-0rkw5rpc\logs\debug-internal.log
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_init.py:init():564] calling init triggers
+2023-08-30 06:05:27,263 INFO    MainThread:20920 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {}
+2023-08-30 06:05:27,266 INFO    MainThread:20920 [wandb_init.py:init():613] starting backend
+2023-08-30 06:05:27,266 INFO    MainThread:20920 [wandb_init.py:init():617] setting up manager
+2023-08-30 06:05:27,272 INFO    MainThread:20920 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-08-30 06:05:27,272 INFO    MainThread:20920 [wandb_init.py:init():623] backend started and connected
+2023-08-30 06:05:27,284 INFO    MainThread:20920 [wandb_init.py:init():714] updated telemetry
+2023-08-30 06:05:27,284 INFO    MainThread:20920 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2023-08-30 06:05:29,266 INFO    MainThread:20920 [wandb_run.py:_on_init():2180] communicating current version
+2023-08-30 06:05:29,765 INFO    MainThread:20920 [wandb_run.py:_on_init():2189] got version response 
+2023-08-30 06:05:29,765 INFO    MainThread:20920 [wandb_init.py:init():798] starting run threads in backend
+2023-08-30 06:05:32,016 INFO    MainThread:20920 [wandb_run.py:_console_start():2159] atexit reg
+2023-08-30 06:05:32,016 INFO    MainThread:20920 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-08-30 06:05:32,016 INFO    MainThread:20920 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-08-30 06:05:32,016 INFO    MainThread:20920 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-08-30 06:05:32,016 INFO    MainThread:20920 [wandb_init.py:init():839] run started, returning control to user process
+2023-08-30 06:05:32,037 INFO    MainThread:20920 [wandb_run.py:_config_callback():1282] config_cb None None {'output_dir': './output_dir', 'overwrite_output_dir': True, 'do_train': False, 'do_eval': False, 'do_predict': False, 'evaluation_strategy': 'IntervalStrategy.NO', 'prediction_loss_only': True, 'per_device_train_batch_size': 4, 'per_device_eval_batch_size': 8, 'per_gpu_train_batch_size': None, 'per_gpu_eval_batch_size': None, 'gradient_accumulation_steps': 1, 'eval_accumulation_steps': None, 'learning_rate': 5e-05, 'weight_decay': 0.0, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'num_train_epochs': 3, 'max_steps': -1, 'lr_scheduler_type': 'SchedulerType.LINEAR', 'warmup_ratio': 0.0, 'warmup_steps': 0, 'log_level': -1, 'log_level_replica': -1, 'log_on_each_node': True, 'logging_dir': './output_dir\\runs\\Aug30_06-05-25_DESKTOP-QN4SQLE', 'logging_strategy': 'IntervalStrategy.STEPS', 'logging_first_step': False, 'logging_steps': -1, 'save_strategy': 'IntervalStrategy.STEPS', 'save_steps': -1, 'save_total_limit': 0, 'save_on_each_node': False, 'no_cuda': False, 'seed': 42, 'fp16': False, 'fp16_opt_level': 'O1', 'fp16_backend': 'auto', 'fp16_full_eval': False, 'local_rank': -1, 'tpu_num_cores': None, 'tpu_metrics_debug': False, 'debug': [], 'dataloader_drop_last': False, 'eval_steps': None, 'dataloader_num_workers': 0, 'past_index': -1, 'run_name': './output_dir', 'disable_tqdm': False, 'remove_unused_columns': True, 'label_names': None, 'load_best_model_at_end': False, 'metric_for_best_model': None, 'greater_is_better': None, 'ignore_data_skip': False, 'sharded_ddp': [], 'deepspeed': None, 'label_smoothing_factor': 0.0, 'adafactor': False, 'group_by_length': False, 'length_column_name': 'length', 'report_to': ['wandb'], 'ddp_find_unused_parameters': None, 'dataloader_pin_memory': True, 'skip_memory_metrics': True, 'use_legacy_prediction_loop': False, 'push_to_hub': False, 'resume_from_checkpoint': None, 'push_to_hub_model_id': 'output_dir', 'push_to_hub_organization': None, 'push_to_hub_token': None, 'mp_parameters': '', '_n_gpu': 1, '__cached__setup_devices': 'cuda:0'}
+2023-08-30 06:05:32,037 INFO    MainThread:20920 [wandb_watch.py:watch():51] Watching
+2023-08-30 06:05:39,595 WARNING MsgRouterThr:20920 [router.py:message_loop():77] message_loop has been closed

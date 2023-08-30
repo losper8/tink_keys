@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "keys_tink.py", line 89, in <module>
+    train_model()
+  File "keys_tink.py", line 84, in train_model
+    trainer.train(callbacks=[TrainerCallback()])
+  File "C:\Users\user\aaa_tollkits\envs\tink\lib\site-packages\transformers\trainer.py", line 1033, in train
+    raise TypeError(f"train() received got unexpected keyword arguments: {', '.join(list(kwargs.keys()))}.")
+TypeError: train() received got unexpected keyword arguments: callbacks.
