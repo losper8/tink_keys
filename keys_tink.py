@@ -48,11 +48,11 @@ def train_model():
     training_args = TrainingArguments(
         output_dir="./output_dir",
         overwrite_output_dir=True,
-        num_train_epochs=10,  # Увеличение количества эпох
-        per_device_train_batch_size=2,  # Уменьшение размера пакета обучения
-        save_steps=500,  # Увеличение частоты сохранения промежуточных результатов
-        save_total_limit=5,  # Сохранение только последних 5 промежуточных результатов
-        logging_steps=100,  # Логирование каждые 100 шагов
+        num_train_epochs=10,  
+        per_device_train_batch_size=2,  
+        save_steps=500,  
+        save_total_limit=5,  
+        logging_steps=100,  
         evaluation_strategy="epoch",
         report_to="tensorboard",  # Использование TensorBoard
     )
