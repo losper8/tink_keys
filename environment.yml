@@ -77,9 +77,9 @@ dependencies:
       - tensorboard==2.14.0
       - tensorboard-data-server==0.7.1
       - tokenizers==0.10.3
-      - torch==1.8.0+cu111
-      - torchaudio==0.8.0
-      - torchvision==0.9.0+cu111
+      - torch
+      - torchaudio
+      - torchvision
       - tqdm==4.66.1
       - transformers==4.10.0
       - typer==0.9.0
