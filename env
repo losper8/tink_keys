@@ -1,0 +1,16 @@
+
+print(torch.cuda.is_available())
+import pandas as pd
+import torch
+import transformers
+import pytorch_lightning
+
+
+print(f"Версия pandas: {pd.__version__}")
+print(f"Версия torch: {torch.__version__}")
+print(f"Версия transformers: {transformers.__version__}")
+print(f"Версия pytorch_lightning: {pytorch_lightning.__version__}")
+#Версия pandas: 2.0.3
+#Версия torch: 1.8.0+cu111
+#Версия transformers: 4.10.0
+#Версия pytorch_lightning: 1.4.9
